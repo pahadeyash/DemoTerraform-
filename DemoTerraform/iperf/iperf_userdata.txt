@@ -1,0 +1,4 @@
+#!/bin/bash
+apt-get install -y python iperf3
+sudo apt install -y python-pip
+sudo pip install Flask
