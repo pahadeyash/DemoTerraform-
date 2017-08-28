@@ -21,7 +21,7 @@ module "iperf-server" {
   vpc = "${module.vpc-west.vpc_id}"
   subnet = "${module.vpc-west.public_subnet_id}"
   keypair = "AviatrixDemo"
-  userdata = "${file("./iperf/iperf_userdata.txt")}"
+  userdata = "${file("./iperf/server_userdata.txt")}"
 }
 
 module "iperf-client" {
@@ -31,7 +31,7 @@ module "iperf-client" {
   vpc = "${module.vpc-east.vpc_id}"
   subnet = "${module.vpc-east.public_subnet_id}"
   keypair = "AviatrixDemo"
-  userdata = "${file("./iperf/iperf_userdata.txt")}"
+  userdata = "${file("./iperf/client_userdata.txt")}"
 }
 
 output "iperf-client-private-ip" {

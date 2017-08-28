@@ -1,0 +1,7 @@
+#!/bin/bash
+sudo apt-get update
+apt-get install -y python iperf3
+sudo apt install -y python-pip
+sudo apt-get install -y tomcat7
+wget http://robslink.com/SAS/democd_compare/likert.png
+sudo mv likert.png /var/lib/tomcat7/webapps/ROOT
